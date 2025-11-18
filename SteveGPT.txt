@@ -1,0 +1,327 @@
+using System.Windows.Forms;
+
+namespace SteveGPT
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        bool boolSkinMode = false;
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            if (boolSkinMode == true)
+            {
+                if (textBox1.Text == "Joker")
+                {
+                    picSteve.Image = Properties.Resources._21b6eaf3_5080_4739_be26_9716983153cc;
+                    
+                }
+                if (textBox1.Text == "speed")
+                {
+                    timer1.Interval = 200;
+                }
+                if (textBox1.Text == "Kim Kardashian")
+                {
+                    picSteve.Image = Properties.Resources.b58cc9aa_5d4e_42ce_8b8e_68be3b46de99;
+                    
+                }
+                if (textBox1.Text == "Snoop Dogg")
+                {
+                    picSteve.Image = Properties.Resources.c1bce4ea_e510_4fb5_b997_6bcb47d4da65;
+                    li.Items.Add("Snoop Dogg");
+                }
+                if (textBox1.Text == "Kim Jong")
+                {
+                    picSteve.Image = Properties.Resources.a00ffc6a_05ff_47e3_809b_19358e68dc57;
+                    li.Items.Add("Kim Jong");
+                }
+                if (textBox1.Text == "Geert Wilders")
+                {
+                    picSteve.Image = Properties.Resources.f50f6921_93a6_435e_bbc3_bad954059906;
+                    li.Items.Add("Geert Wilders");
+                }
+                if (textBox1.Text == "Dikke Nigger")
+                {
+                    picSteve.Image = Properties.Resources.bbdaa89a_1071_4adc_9dcd_d1123c12ea4f;
+                    li.Items.Add("Dikke Nigger");
+                }
+                if (textBox1.Text == "2 Pac")
+                {
+                    picSteve.Image = Properties.Resources._6a6d1e72_33b7_4f2b_851b_a750028b8dbc;
+                    li.Items.Add("2 Pac");
+                }
+                if (textBox1.Text == "Sieg Heil")
+                {
+                    picSteve.Image = Properties.Resources.unnamed__1_;
+                    li.Items.Add("Sieg Heil");
+                }
+                if (textBox1.Text == "Mega Stevie")
+                {
+                    picSteve.Image = Properties.Resources._1000201255;
+                    li.Items.Add("Mega Stevie");
+                }
+                if (textBox1.Text == "Steverbolts")
+                {
+                    picSteve.Image = Properties.Resources._1000201257;
+                    li.Items.Add("Steverbolts");
+                }
+                if (textBox1.Text == "Steve Wars")
+                {
+                    picSteve.Image = Properties.Resources._1000201256;
+                    li.Items.Add("Steve Wars");
+                }
+                if (textBox1.Text == "The Last CSS")
+                {
+                    picSteve.Image = Properties.Resources._1000201259;
+                    li.Items.Add("The Last CSS");
+                }
+                if (textBox1.Text == "The Word Awakens")
+                {
+                    picSteve.Image = Properties.Resources._1000201258;
+                    li.Items.Add("The Word Awakens");
+                }
+                if (textBox1.Text == "Stevengers")
+                {
+                    picSteve.Image = Properties.Resources._1000201245;
+                    li.Items.Add("Joker");
+                }
+                if (textBox1.Text == "Bad Teacher")
+                {
+                    picSteve.Image = Properties.Resources._1000201247;
+                    li.Items.Add("Joker");
+                }
+                if (textBox1.Text == "Steve White")
+                {
+                    picSteve.Image = Properties.Resources._1000201246;
+                    li.Items.Add("Joker");
+                }
+                if (textBox1.Text == "You shall not piss")
+                {
+                    picSteve.Image = Properties.Resources._1000201253;
+                    li.Items.Add("Joker");
+                }
+                if (textBox1.Text == "Stieve Smetborn")
+                {
+                    picSteve.Image = Properties.Resources._1000201252;
+                    li.Items.Add("Joker");
+                }
+                if (textBox1.Text == "Tarifs")
+                {
+                    picSteve.Image = Properties.Resources._1000201249;
+                    li.Items.Add("Joker");
+                }
+                textBox1.Text = "";
+            }
+            else
+            {
+                btnSend.Visible = false;
+                textBox1.Visible = false;
+                timer1.Start();
+                lblSteve.Visible = true;
+                lblSteve.Text = "uh.";
+            }
+        }
+        int intLoop = 1;
+        int intTime = 0;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (intLoop == 1)
+            {
+                lblSteve.Text = "uh..";
+            }
+            else if (intLoop == 2)
+            {
+                lblSteve.Text = "uh...";
+            }
+            else
+            {
+                lblSteve.Text = "uh.";
+                intLoop = 0;
+                intTime++;
+
+                if (intTime == 5)
+                {
+                    timer1.Stop();
+                    Answer();
+                }
+            }
+            intLoop++;
+        }
+
+        private void Answer()
+        {
+            Random rnd = new Random();
+            int intRnd = rnd.Next(1, 12);
+            switch (intRnd)
+            {
+                case 1:
+                    Environment.Exit(0);
+                    break;
+                case 2:
+                    picSteve.Visible = false;
+                    lblSteve.Visible = false;
+                    timReset.Dispose();
+                    break;
+                case 3:
+                    lblSteve.Text = "Wifi moet af";
+                    break;
+                case 4:
+                    lblSteve.Text = "Schrijf 4 lijnen code en verwijder die dan terug";
+                    break;
+                case 5:
+                    lblSteve.Text = "Uh..................";
+                    break;
+                case 6:
+                    lblSteve.Visible = false;
+                    break;
+                case 7:
+                    timLeave.Start();
+                    timReset.Dispose();
+                    break;
+                case 8:
+                    BackColor = Color.Black;
+                    ForeColor = Color.White;
+                    break;
+                case 9:
+                    textBox1.Dispose();
+                    break;
+                case 10:
+                    var img = picSteve.Image;
+                    img.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                    picSteve.Image = img;
+                    picSteve.Refresh();
+                    break;
+                case 11:
+                    Bitmap bmp = new Bitmap(picSteve.Image);
+                    for (int y = 0; y < bmp.Height; y++)
+                        for (int x = 0; x < bmp.Width; x++)
+                            bmp.SetPixel(x, y, Color.FromArgb(255 - bmp.GetPixel(x, y).R,
+                                                              255 - bmp.GetPixel(x, y).G,
+                                                              255 - bmp.GetPixel(x, y).B));
+                    picSteve.Image = bmp;
+                    break;
+            }
+            intTime = 0;
+            timReset.Start();
+        }
+
+        private void timReset_Tick(object sender, EventArgs e)
+        {
+            lblSteve.Visible = false;
+            textBox1.Text = "";
+            textBox1.Visible = true;
+            btnSend.Visible = true;
+            timReset.Stop();
+        }
+
+        private void timLeave_Tick(object sender, EventArgs e)
+        {
+            picSteve.Location = new Point(picSteve.Location.X + 5, picSteve.Location.Y);
+            if (picSteve.Location.X >= this.Size.Width)
+            {
+                picSteve.Visible = false;
+                timLeave.Stop();
+            }
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSend_Click(sender, e);
+            }
+            if (e.KeyCode == Keys.Oem1)
+            {
+                e.SuppressKeyPress = true;
+                if (boolSkinMode == false)
+                {
+                    boolSkinMode = true;
+                    btnSend.ForeColor = Color.White;
+                    btnSend.BackColor = Color.Green;
+                }
+                else
+                {
+                    boolSkinMode = false;
+                    btnSend.ForeColor = DefaultForeColor;
+                    btnSend.BackColor = DefaultBackColor;
+                }
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+        string strLine = "";
+        int intCycle = 0;
+        private void btnSend_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (intCycle == 0)
+            {
+                if (e.KeyCode == Keys.D)
+                {
+                    strLine += "D";
+                    intCycle++;
+                }
+                else 
+                {
+                    strLine = "";
+                }
+            }
+            else if (intCycle == 1)
+            {
+                if (e.KeyCode == Keys.U)
+                {
+                    strLine += "U";
+                    intCycle++;
+                }
+                else
+                {
+                    strLine = "";
+                    intCycle = 0;
+                }
+            }
+            else if (intCycle == 2)
+            {
+                if (e.KeyCode == Keys.D)
+                {
+                    strLine += "D";
+                    intCycle++;
+                }
+                else
+                {
+                    strLine = "";
+                }
+            }
+            else if (intCycle == 3)
+            {
+                if (e.KeyCode == Keys.E)
+                {
+                    strLine += "E";
+                    intCycle++;
+                }
+                else
+                {
+                    strLine = "";
+                    intCycle = 0;
+                }
+            }
+            else if (intCycle == 4)
+            {
+                if (e.KeyCode == Keys.Oem2)
+                {
+                    li.Visible = true;
+                    li.Items.Add("Joker"); 
+                    li.Items.Add("Kim Kardashian"); li.Items.Add("Joker"); li.Items.Add("Joker"); li.Items.Add("Joker"); li.Items.Add("Joker"); li.Items.Add("Joker"); li.Items.Add("Joker"); li.Items.Add("Joker"); li.Items.Add("Joker"); li.Items.Add("Joker"); li.Items.Add("Joker"); li.Items.Add("Joker"); li.Items.Add("Joker"); li.Items.Add("Joker"); li.Items.Add("Joker"); li.Items.Add("Joker"); li.Items.Add("Joker"); li.Items.Add("Joker"); li.Items.Add("Joker"); li.Items.Add("Joker");
+                }
+                else
+                {
+                    strLine = "";
+                    intCycle = 0;
+                }
+            }
+        }
+    }
+}
